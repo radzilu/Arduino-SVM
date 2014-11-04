@@ -1,2 +1,2 @@
-Arduino-SVM
+Arduino-S
 ===========
