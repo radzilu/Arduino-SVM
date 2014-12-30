@@ -13,6 +13,5 @@ Arduino-SVM is a Processing sketch which builds Arduino sketches from LibSVM (ht
 - The build Arduino sketch forwards the recognized class (label: 0,1...n) to the Serial Monitor with a baud rate of 115200.
 
 Status
----------
----------
+=========
 This is beta code. We've done ad-hoc testing primarily with a RBF kernel. Please let us know if you find mistakes and feel free to change the code to your needs. To use the program you have to have LibSVM, Arduino and Processing installed on your computer. We tested with LibSVM 3.12, Arduino 1.0.6 and Processing 2.2.1.
