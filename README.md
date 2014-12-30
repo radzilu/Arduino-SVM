@@ -14,4 +14,4 @@ Arduino-SVM is a Processing sketch which builds Arduino sketches from LibSVM (ht
 
 Status
 =========
-This is beta code. We've done ad-hoc testing primarily with a RBF kernel. Please let us know if you find mistakes and feel free to change the code to your needs. To use the program you have to have LibSVM, Arduino and Processing installed on your computer. We tested with LibSVM 3.12, Arduino 1.0.6 and Processing 2.2.1.
+This is beta code. We've done ad-hoc testing primarily with a RBF kernel. Please let us know if you find mistakes and feel free to change the code to your needs. To use the program you have to have LibSVM, Arduino and Processing installed on your computer, also you nead the ControleP5 libery for processing. We tested with LibSVM 3.12, Arduino 1.0.6 and Processing 2.2.1.
