@@ -291,7 +291,7 @@ void controlEvent(ControlEvent theEvent) {
           output.print("};");
 
           output.print("\n\nvoid scale(const int* sensor, float* scaledSensor){\n  for(int p=0; p<VEC_DIM;p++){\n    scaledSensor[p] = (float)scalePar[0] +((float)scalePar[1] -((float)scalePar[0]))*((float)sensor[p]-(float)low[p])/((float)high[p]-(float)low[p]);\n  }\n}");
-          output.println("\n\ninline void svm_predict(int sensor[]){\n  int recognizedClass = 0;\n  float scaledSensor[VEC_DIM];\n  scale(sensor,scaledSensor);\n  int rhoCounter = 0;");
+          output.println("\n\ninline void svm_predict(int sensor[]){\n  int recognizedClass = 1;\n  float scaledSensor[VEC_DIM];\n  scale(sensor,scaledSensor);\n  int rhoCounter = 0;");
           output.println("\n\n  for(int i=0; i<NR_CLASS; i++){\n    for(int j=i+1; j<NR_CLASS; j++){\n      float accumulator = 0;");
           output.println("\n\n      float* sv_class1 = (float*) pgm_read_word(supportVectors + i);\n      float* sv_class2 = (float*) pgm_read_word(supportVectors + j);\n      float* coeffs1   = (float*) pgm_read_word(valuesForSupport + i) + nr_sv[i] * (j-1);\n     float* coeffs2   = (float*) pgm_read_word(valuesForSupport + j) + nr_sv[j] * i;"); 
           output.println("\n\n      accumulator += svm_evaluate(nr_sv[i], coeffs1, sv_class1, scaledSensor);\n      accumulator += svm_evaluate(nr_sv[j], coeffs2, sv_class2, scaledSensor);");
