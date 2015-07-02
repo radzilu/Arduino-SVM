@@ -180,7 +180,7 @@ void controlEvent(ControlEvent theEvent) {
                 }
                 model = model + "}; \n";
 
-                start = start + nr_sv[x] - 1;
+                start = start + nr_sv[x];
                 x++;
               } 
               output.println("#define VEC_DIM " + str(nr_sens));
